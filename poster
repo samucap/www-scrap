@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+
+#base=https://youtube.googleapis.com/youtube/v3
+base=https://www.googleapis.com/youtube/v3
+searchPath='/search'
+params=&regionCode\=BR&key\=AIzaSyDWPOlZVLATb_-R4-abM-iktIx6DJ4vdEE
+searchParams=?type\=video&videoCategoryId\=UCBR8-60-B28hp2BmDPdntcQ$params
+curl --header 'Accept: application/json' -v \
+	"$base$searchPath$params"
